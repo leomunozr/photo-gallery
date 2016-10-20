@@ -2,8 +2,8 @@ html, body {
   height: 98%;
 }
 body { 
-  padding-top: 90px;
   overflow-y: scroll;
+  padding-top: 90px;
 }
 header {
   color: #666;
@@ -15,21 +15,11 @@ header {
 .navbar-toggle {
   margin-top: 30px;
 }
-.lateral {
-  margin-top: 30px;
-  padding-left: 50px;
+#navCategories ul {
+  margin-right: 50px;
 }
-.close-icon {
-  background: white;
-  border-radius: 18px;
-  cursor: pointer;
-  font-size: 25px;
-  height: 30px;
-  position: absolute;
-  right: -27px;
-  text-align: center;
-  top: -27px;
-  width: 30px;
+.menu-item {
+  margin: 40px 10px 0;
 }
 .menu-item a{
   color: #666 !important;
@@ -102,7 +92,16 @@ header {
 .img-container {
   padding-top: 10px;
 }
-/*** Modal ***/
-.img-modal {
-  max-width: 100%;
+/*** carousel ***/
+.close-icon {
+  background: white;
+  border-radius: 18px;
+  cursor: pointer;
+  font-size: 25px;
+  height: 30px;
+  position: absolute;
+  right: 12px;
+  text-align: center;
+  top: 0;
+  width: 30px;
 }

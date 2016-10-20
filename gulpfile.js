@@ -1,22 +1,22 @@
-var gulp = require('gulp'),
-  babelify = require('babelify'),
+var babelify = require('babelify'),
   browserify = require("browserify"),
   connect = require("gulp-connect"),
-  source = require("vinyl-source-stream"),
   fs = require('fs'),
-  path = require('path');
+  glob = require('glob'),
+  gulp = require('gulp'),
+  path = require('path'),
+  source = require("vinyl-source-stream");
+
+var jsSources = glob.sync('./!(build|node_modules|bower_components)/*.js');
 
 gulp.task('build', function() {
   console.log('Building...');
+  console.log(jsSources) 
   return browserify({
-    entries: [
-      'js/app.js',
-      'js/main.controller.js',
-      'js/imageModal.controller.js'
-    ]
+    entries: jsSources
   })
     .transform(babelify.configure({
-        presets : ["es2015"]
+      presets: ["es2015"]
     }))
     .bundle()
     .pipe(source('bundle.js'))
@@ -28,7 +28,7 @@ gulp.task('listImages', function() {
 
   const basePath = 'images';
   var images = [];
-  
+
   var list_files = function(dir) {
     var files = fs.readdirSync(dir);
 
@@ -40,7 +40,7 @@ gulp.task('listImages', function() {
         console.log(file + ' is a directory.');
         list_files(filePath);
       }
-          
+
       else {
         var image = {
           'name': file,
@@ -52,7 +52,7 @@ gulp.task('listImages', function() {
 
     });
 
-    fs.writeFileSync('js/images.json', JSON.stringify(images, null, 4));    
+    fs.writeFileSync('js/images.json', JSON.stringify(images, null, 4));
     return images;
   }
 
@@ -68,6 +68,6 @@ gulp.task('serve', function() {
 gulp.task('default', ['listImages', 'build', 'watch', 'serve']);
 
 gulp.task('watch', function() {
-  gulp.watch(['js/*', '!js/images.json'], ['build']);
+  gulp.watch(jsSources, ['build']);
   gulp.watch('images/**', ['listImages', 'build']);
 });

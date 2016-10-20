@@ -1,15 +1,13 @@
 import MainController from './main.controller';
-import ImageModalController from './imageModal.controller';
+import Panel from '../panel/panel';
 
 angular.module('app', [
   'ngAnimate',
-  'ui.bootstrap',
   'angularGrid',
-  'infinite-scroll'
+  Panel.name
 ])
   .value('THROTTLE_MILLISECONDS', 350)
   .controller('MainCtrl', MainController)
-  .controller('ImageModalController', ImageModalController)
   .run(($templateCache) => {
-    $templateCache.put('imageModal.html', '../views/imageModal.html');
+    $templateCache.put('panel.html', '../panel/panel.html');
   });
