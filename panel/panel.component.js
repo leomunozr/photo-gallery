@@ -5,8 +5,9 @@ let templateUrl = './panel/panel.html'
 let PanelComponent = {
   restrict: 'E',
   bindings: {
-    src: '=',
-    close: '&' 
+    slides: '<',
+    selected: '=',
+    close: '&'
   },
   templateUrl,
   styleUrls: ['./panel/panel.css'],

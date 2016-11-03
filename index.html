@@ -38,19 +38,19 @@
 			</div>
 		</nav>
 
-		<div class="container-fluid" ng-if="!main.imageSelected">
+		<div class="container-fluid" ng-if="!main.showPanel">
 			<div class="row">
 				<div id="gallery-wrap" class="img-container col-md-12">
 					<div angular-grid="main.images">
 						<div class="grid" ng-repeat="image in main.images | orderBy: 'name'">
-							<img class="grid-img" ng-src="{{ ::image.src }}" ng-click="main.showImage(image)">
+							<img class="grid-img" ng-src="{{ ::image.src }}" ng-click="main.showImage($index)">
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<img-panel ng-if="main.imageSelected" src="main.imageSelected.src" close="main.hideImage()"></img-panel>
+		<img-panel ng-if="main.showPanel" slides="main.images" selected="main.imageSelected" close="main.hideImage()"></img-panel>
 
 	</div>
 
@@ -58,6 +58,7 @@
 	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="node_modules/angular/angular.min.js"></script>
 	<script src="node_modules/angular-animate/angular-animate.min.js"></script>
+	<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
 	<script src="node_modules/angulargrid/angulargrid.js"></script>
 	<script src="build/bundle.js"></script>
 </body>

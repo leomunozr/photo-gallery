@@ -38,6 +38,7 @@ class MainController {
   }
 
   filterImages(filter) {
+    this.hideImage();
     if (filter === this.categorySelected) return;
     this.loadImages(filter);
     this.categorySelected = startCase(filter);
@@ -46,10 +47,13 @@ class MainController {
   showImage(imageSelected) {
     console.log(imageSelected)
     this.imageSelected = imageSelected;
+    this.showPanel = true;
   }
+
   hideImage() {
     console.log("delete")
     this.imageSelected = null;
+    this.showPanel = false;
   }
 
   loadMore() {

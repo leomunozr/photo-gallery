@@ -4,7 +4,11 @@
 			<div class="close-icon" ng-click="vm.close()">
 				<span class="glyphicon glyphicon-remove-circle"></span>
 			</div>
-			<img ng-src="{{ vm.src }}" alt="image" class="img-responsive center-block">
+			<div uib-carousel active="vm.selected">
+				<div uib-slide ng-repeat="slide in vm.slides | orderBy: 'name'  track by $index" index="$index">
+					<img ng-src="{{ slide.src }}" alt="image" class="img-responsive center-block">
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
