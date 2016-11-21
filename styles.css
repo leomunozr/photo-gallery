@@ -92,7 +92,7 @@ header {
 .img-container {
   padding-top: 10px;
 }
-/*** carousel ***/
+/*** Panel component ***/
 .close-icon {
   background: white;
   border-radius: 18px;
@@ -102,6 +102,22 @@ header {
   position: absolute;
   right: 12px;
   text-align: center;
-  top: 0;
+  top: -10px;
   width: 30px;
+  z-index: 1;
 }
+.panel {
+  padding-top: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/*** Carousel override ***/
+.carousel-control { 
+  text-shadow: 0 5px 2px rgba(0,0,0,.6);
+  width: 10%; 
+}
+.carousel-control.left { background-image: none; }
+.carousel-control.right { background-image: none; }
+.carousel-control .glyphicon-chevron-right, .carousel-control .glyphicon-chevron-left { font-size: 100px;}
+.carousel-control .glyphicon-chevron-right { width: auto; }

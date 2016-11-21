@@ -1,10 +1,10 @@
 import angular from 'angular';
-import panelComponent from './panel.component';
+import panelComponent from './panel.directive';
 
 let panelModule = angular.module('app.panel', [
   'ngAnimate',
   'ui.bootstrap'
 ])
-  .component('imgPanel', panelComponent);
+  .directive('imgPanel', panelComponent);
 
 export default panelModule;
