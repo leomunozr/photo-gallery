@@ -37,19 +37,8 @@
 				</div>
 			</div>
 		</nav>
-
-		<div class="container-fluid" ng-if="!main.showPanel">
-			<div class="row">
-				<div id="gallery-wrap" class="img-container col-md-12">
-					<div angular-grid="main.images">
-						<div class="grid" ng-repeat="image in main.images | orderBy: 'name'">
-							<img class="grid-img" ng-src="{{ ::image.src }}" ng-click="main.showImage($index)">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
+    
+    <gallery  images="main.images" enlarge="main.showImage(index)" ng-hide="main.showPanel"></gallery>
 		<img-panel ng-if="main.showPanel" slides="main.images" selected="main.imageSelected" close="main.hideImage()"></img-panel>
 
 	</div>

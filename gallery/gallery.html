@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="row">
+    <div id="gallery-wrap" class="img-container col-md-12">
+      <div angular-grid="vm.images">
+        <div class="grid" ng-repeat="image in vm.images | orderBy: 'name'">
+          <img class="grid-img" ng-src="{{ ::image.src }}" ng-click="vm.enlarge({index: $index})">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
