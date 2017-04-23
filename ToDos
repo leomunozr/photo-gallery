@@ -1,10 +1,10 @@
+- Esc para salir de carrusel
+- Regresar a / si la url es incorrecta
 - Logo Leo Rivera
-- Arreglar lag en nagegación de carrusel 
 - Agregar sección de contacto
 - Cambiar bolitas del carrusel por thumbnails
-- Creat thumbnails de menor valor dentro del script de gulp
+- Modifiar script de gulp para que cree thumbnails de las imágenes
 - Mostrar versiones reducidas de cada imagen
-- Llenar la pantalla con la imagen en full view
-- Arreglar el focus del evento para avanzar el carruserl
+- Ajustar alto de cada imagen en full view
 - Agregar íconos de redes sociales
 - Deployment

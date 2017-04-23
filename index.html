@@ -29,17 +29,15 @@
 				</div>
 				<div class="collapse navbar-collapse" id="navCategories">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="menu-item" ng-click="main.filterImages('All')"><a href="#">All</a></li>
-						<li class="menu-item" ng-class="{'menu-item--selected': category == main.categorySelected}" ng-repeat="category in main.categories"
-							ng-click="main.filterImages(category)">
-							<a href="#">{{ ::category }}</a></li>
+						<li class="menu-item"><a ng-href="/">All</a></li>
+						<li class="menu-item" ng-class="{'menu-item--selected': category == main.categorySelected}" ng-repeat="category in main.categories">
+							<a ng-href="#!/{{::category.toLowerCase()}}">{{ ::category }}</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-    
-    <gallery  images="main.images" enlarge="main.showImage(index)" ng-hide="main.showPanel"></gallery>
-		<img-panel ng-if="main.showPanel" slides="main.images" selected="main.imageSelected" close="main.hideImage()"></img-panel>
+
+    <div ng-view></div>
 
 	</div>
 
@@ -47,6 +45,7 @@
 	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="node_modules/angular/angular.min.js"></script>
 	<script src="node_modules/angular-animate/angular-animate.min.js"></script>
+  <script src="node_modules/angular-route/angular-route.js"></script>
 	<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
 	<script src="node_modules/angulargrid/angulargrid.js"></script>
 	<script src="build/bundle.js"></script>

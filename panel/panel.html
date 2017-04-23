@@ -1,15 +1,17 @@
-<div class="container-flow panel">
+<div carousel-nav class="container-flow panel">
 	<div class="row">
 		<div class="col-xs-12">
-			<div class="close-icon" ng-click="vm.close()">
-				<span class="glyphicon glyphicon-remove-circle"></span>
+			<div class="close-icon">
+        <a ng-href="#!/{{vm.category === 'all' ? '' : vm.category }}">
+          <span class="glyphicon glyphicon-remove-circle"></span>
+        </a>
 			</div>
 			<div uib-carousel active="vm.selected">
 				<div uib-slide ng-repeat="slide in vm.slides | orderBy: 'name'  track by $index" index="$index">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-10 col-lg-offset-1">
-								<img ng-src="{{ slide.src }}" alt="image" class="img-responsive center-block">
+								<img ng-src="{{ ::slide.src }}" alt="image" class="img-responsive center-block">
 							</div>
 						</div>
 					</div>

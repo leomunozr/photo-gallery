@@ -1,13 +1,14 @@
+import imagesOrig from '../js/images.json';
+
 class PanelController {
-  constructor() {
-  }
-
-  setIndexes() {
-    let temp = this.slides.splice(0, this.selected);
-    this.slides = this.slides.concat(temp);
-
-    this.slides.map((slide, i) => slide.id = i);
+  constructor($rootScope, $routeParams) {
+    this.category = $rootScope.currentCategory || 'all';
+    this.slides = this.category === 'all' ? imagesOrig : imagesOrig.filter((slide) => {
+      return slide.category === this.category
+    });
+    this.selected = parseInt($routeParams.img);
   }
 }
 
+PanelController.$inject = ['$rootScope', '$routeParams'];
 export default PanelController;
