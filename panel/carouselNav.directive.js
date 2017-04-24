@@ -2,8 +2,7 @@ let carouselNavDirective = ($document, $rootScope, $location) => {
   return {
     restrict: 'A',
     link: (scope, elem, attr) => {
-  console.log("scope", $rootScope)
-
+      
       $document.on('keydown', (ev) => {
         let key = ev.keyCode || ev.which;
       

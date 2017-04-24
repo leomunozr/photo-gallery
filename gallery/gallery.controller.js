@@ -7,9 +7,11 @@ class GalleryController {
     this.images = [];
     this.categorySelected = $routeParams.category || 'all';
     this.loading = false;
-    $rootScope.currentCategory = this.categorySelected;
 
     this.loadImages(this.categorySelected);
+
+    $rootScope.currentCategory = this.categorySelected;
+    $rootScope.images = this.images;
   }
 
   loadImages(filter) {

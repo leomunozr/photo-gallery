@@ -1,12 +1,12 @@
 import imagesOrig from '../js/images.json';
+import { sortByName } from '../helpers/helpers';
 
 class PanelController {
   constructor($rootScope, $routeParams) {
     this.category = $rootScope.currentCategory || 'all';
-    this.slides = this.category === 'all' ? imagesOrig : imagesOrig.filter((slide) => {
-      return slide.category === this.category
-    });
-    this.selected = parseInt($routeParams.img);
+    this.slides = $rootScope.images || imagesOrig;
+    let imageId = $routeParams.img;
+    this.selected = this.slides.findIndex(slide => slide.id === imageId);
   }
 }
 

@@ -43,6 +43,7 @@ gulp.task('listImages', function() {
 
       else {
         var image = {
+          'id': file,
           'name': file,
           'category': path.dirname(path.relative(basePath, filePath)),
           'src': path.relative('.', filePath)
