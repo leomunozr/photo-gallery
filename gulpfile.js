@@ -50,16 +50,21 @@ gulp.task('listImages', function() {
         }
         images.push(image);
       }
-
     });
 
-    fs.writeFileSync('js/images.json', JSON.stringify(images, null, 4));
     return images;
   }
 
   var list = list_files(basePath);
   console.log(list);
 
+  images.sort(function(a, b) {
+    if (a.id > b.id) return 1;
+    if (a.id < b.id) return -1;
+    return 0;
+  });
+
+  fs.writeFileSync('js/images.json', JSON.stringify(images, null, 4));
 });
 
 gulp.task('serve', function() {
