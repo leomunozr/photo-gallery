@@ -27,7 +27,7 @@ angular.module('app', [
         controllerAs: 'vm'
       })
       .when('/image/:img', {
-        templateUrl: '../panel/panel.html',
+        template: '<img-panel></img-panel>',
         controller: PanelController,
         controllerAs: 'vm'
       })
