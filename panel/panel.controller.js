@@ -1,5 +1,4 @@
 import imagesOrig from '../js/images.json';
-import { sortByName } from '../helpers/helpers';
 
 const GET_ID = (obj, index) => obj[index].id;
 
