@@ -4,7 +4,7 @@
       <div angular-grid="vm.images">
         <div class="grid" ng-repeat="image in vm.images">
           <a href="#!/image/{{ ::image.id }}">
-            <img class="grid-img" ng-src="{{ ::image.src }}" />
+            <img class="grid-img" ng-src="{{ ::image.min }}" />
           </a>
         </div>
       </div>

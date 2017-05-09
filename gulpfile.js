@@ -4,7 +4,9 @@ var babelify = require('babelify'),
   fs = require('fs'),
   glob = require('glob'),
   gulp = require('gulp'),
+  imageResize = require('gulp-image-resize');
   path = require('path'),
+  rename = require("gulp-rename"),
   source = require("vinyl-source-stream");
 
 var jsSources = glob.sync('./!(build|node_modules|bower_components)/*.js');
@@ -33,11 +35,14 @@ gulp.task('listImages', function() {
     var files = fs.readdirSync(dir);
 
     files.forEach(file => {
+      // No listar las imágenes minificadas
+      if (file.includes('.min')) return;
+
       var filePath = path.join(dir, file);
       var stats = fs.statSync(filePath);
 
       if (stats.isDirectory()) {
-        console.log(file + ' is a directory.');
+        console.log(file + ' directory found.');
         list_files(filePath);
       }
 
@@ -46,7 +51,8 @@ gulp.task('listImages', function() {
           'id': file,
           'name': file,
           'category': path.dirname(path.relative(basePath, filePath)),
-          'src': path.relative('.', filePath)
+          'src': path.relative('.', filePath),
+          'min': path.relative('.', filePath).replace('.jpg', '.min.jpg')
         }
         images.push(image);
       }
@@ -56,22 +62,29 @@ gulp.task('listImages', function() {
   }
 
   var list = list_files(basePath);
-  console.log(list);
 
   images.sort(function(a, b) {
     if (a.id > b.id) return 1;
     if (a.id < b.id) return -1;
     return 0;
   });
+  console.log(list);
 
   fs.writeFileSync('js/images.json', JSON.stringify(images, null, 4));
+});
+
+gulp.task('minify', function() {
+  gulp.src(['images/**/*.jpg', '!images/**/*.min.*'])
+    .pipe(imageResize({ width: 600 }))
+    .pipe(rename(function(path) { path.basename += '.min'}))
+    .pipe(gulp.dest('images'));
 });
 
 gulp.task('serve', function() {
   connect.server();
 });
 
-gulp.task('default', ['listImages', 'build', 'watch', 'serve']);
+gulp.task('default', ['listImages', 'minify', 'build', 'watch', 'serve']);
 
 gulp.task('watch', function() {
   gulp.watch(jsSources, ['build']);
