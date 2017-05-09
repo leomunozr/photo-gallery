@@ -4,11 +4,11 @@ let panelFunc = ($document, $rootScope, $location) => {
     
     $document.on('keydown', (ev) => {
       let key = ev.keyCode || ev.which;
-      
+
       switch (key) {
         // esc
         case 27:
-          const anterior = $rootScope.currentCategory === 'all' ? '/' : $rootScope.currentCategory;
+          const anterior = $rootScope.currentCategory === 'all' ? '/' : $rootScope.currentCategory === undefined ? '/' : $rootScope.currentCategory;
           scope.$apply(() => { $location.path(anterior) });
           break;
         // izq
