@@ -1,218 +1,212 @@
 [
     {
-        "id": "DSC_7163.jpg",
-        "name": "DSC_7163.jpg",
-        "category": "brasil",
-        "src": "images\\brasil\\DSC_7163.jpg"
-    },
-    {
-        "id": "DSC_7181.jpg",
-        "name": "DSC_7181.jpg",
-        "category": "brasil",
-        "src": "images\\brasil\\DSC_7181.jpg"
-    },
-    {
-        "id": "DSC_7190.jpg",
-        "name": "DSC_7190.jpg",
-        "category": "brasil",
-        "src": "images\\brasil\\DSC_7190.jpg"
-    },
-    {
-        "id": "DSC_7193.jpg",
-        "name": "DSC_7193.jpg",
-        "category": "brasil",
-        "src": "images\\brasil\\DSC_7193.jpg"
-    },
-    {
-        "id": "DSC_7208.jpg",
-        "name": "DSC_7208.jpg",
-        "category": "brasil",
-        "src": "images\\brasil\\DSC_7208.jpg"
-    },
-    {
-        "id": "DSC_7243.jpg",
-        "name": "DSC_7243.jpg",
-        "category": "brasil",
-        "src": "images\\brasil\\DSC_7243.jpg"
-    },
-    {
-        "id": "DSC_7492.jpg",
-        "name": "DSC_7492.jpg",
-        "category": "brasil",
-        "src": "images\\brasil\\DSC_7492.jpg"
-    },
-    {
-        "id": "DSC_4951.jpg",
-        "name": "DSC_4951.jpg",
-        "category": "cabos",
-        "src": "images\\cabos\\DSC_4951.jpg"
-    },
-    {
-        "id": "DSC_4956.jpg",
-        "name": "DSC_4956.jpg",
-        "category": "cabos",
-        "src": "images\\cabos\\DSC_4956.jpg"
-    },
-    {
         "id": "DSC_5060.jpg",
         "name": "DSC_5060.jpg",
         "category": "cabos",
-        "src": "images\\cabos\\DSC_5060.jpg"
-    },
-    {
-        "id": "DSC_5485.jpg",
-        "name": "DSC_5485.jpg",
-        "category": "gdl",
-        "src": "images\\gdl\\DSC_5485.jpg"
+        "src": "images\\cabos\\DSC_5060.jpg",
+        "min": "images\\cabos\\DSC_5060.min.jpg"
     },
     {
         "id": "DSC_5182.jpg",
         "name": "DSC_5182.jpg",
         "category": "hidalgo",
-        "src": "images\\hidalgo\\DSC_5182.jpg"
+        "src": "images\\hidalgo\\DSC_5182.jpg",
+        "min": "images\\hidalgo\\DSC_5182.min.jpg"
     },
     {
         "id": "DSC_5309.jpg",
         "name": "DSC_5309.jpg",
         "category": "hidalgo",
-        "src": "images\\hidalgo\\DSC_5309.jpg"
+        "src": "images\\hidalgo\\DSC_5309.jpg",
+        "min": "images\\hidalgo\\DSC_5309.min.jpg"
     },
     {
         "id": "DSC_5321.jpg",
         "name": "DSC_5321.jpg",
         "category": "hidalgo",
-        "src": "images\\hidalgo\\DSC_5321.jpg"
+        "src": "images\\hidalgo\\DSC_5321.jpg",
+        "min": "images\\hidalgo\\DSC_5321.min.jpg"
     },
     {
         "id": "DSC_5427.jpg",
         "name": "DSC_5427.jpg",
         "category": "hidalgo",
-        "src": "images\\hidalgo\\DSC_5427.jpg"
+        "src": "images\\hidalgo\\DSC_5427.jpg",
+        "min": "images\\hidalgo\\DSC_5427.min.jpg"
     },
     {
-        "id": "IMG_3489.JPG",
-        "name": "IMG_3489.JPG",
-        "category": "karen",
-        "src": "images\\karen\\IMG_3489.JPG"
+        "id": "DSC_5485.jpg",
+        "name": "DSC_5485.jpg",
+        "category": "gdl",
+        "src": "images\\gdl\\DSC_5485.jpg",
+        "min": "images\\gdl\\DSC_5485.min.jpg"
     },
     {
-        "id": "IMG_3494.JPG",
-        "name": "IMG_3494.JPG",
-        "category": "karen",
-        "src": "images\\karen\\IMG_3494.JPG"
+        "id": "DSC_7163.jpg",
+        "name": "DSC_7163.jpg",
+        "category": "brasil",
+        "src": "images\\brasil\\DSC_7163.jpg",
+        "min": "images\\brasil\\DSC_7163.min.jpg"
     },
     {
-        "id": "IMG_3505.JPG",
-        "name": "IMG_3505.JPG",
-        "category": "karen",
-        "src": "images\\karen\\IMG_3505.JPG"
+        "id": "DSC_7181.jpg",
+        "name": "DSC_7181.jpg",
+        "category": "brasil",
+        "src": "images\\brasil\\DSC_7181.jpg",
+        "min": "images\\brasil\\DSC_7181.min.jpg"
     },
     {
-        "id": "IMG_3522.JPG",
-        "name": "IMG_3522.JPG",
-        "category": "karen",
-        "src": "images\\karen\\IMG_3522.JPG"
+        "id": "DSC_7190.jpg",
+        "name": "DSC_7190.jpg",
+        "category": "brasil",
+        "src": "images\\brasil\\DSC_7190.jpg",
+        "min": "images\\brasil\\DSC_7190.min.jpg"
     },
     {
-        "id": "IMG_3524.JPG",
-        "name": "IMG_3524.JPG",
-        "category": "karen",
-        "src": "images\\karen\\IMG_3524.JPG"
+        "id": "DSC_7193.jpg",
+        "name": "DSC_7193.jpg",
+        "category": "brasil",
+        "src": "images\\brasil\\DSC_7193.jpg",
+        "min": "images\\brasil\\DSC_7193.min.jpg"
     },
     {
-        "id": "IMG_3525.JPG",
-        "name": "IMG_3525.JPG",
-        "category": "karen",
-        "src": "images\\karen\\IMG_3525.JPG"
+        "id": "DSC_7208.jpg",
+        "name": "DSC_7208.jpg",
+        "category": "brasil",
+        "src": "images\\brasil\\DSC_7208.jpg",
+        "min": "images\\brasil\\DSC_7208.min.jpg"
     },
     {
-        "id": "IMG_3527.JPG",
-        "name": "IMG_3527.JPG",
-        "category": "karen",
-        "src": "images\\karen\\IMG_3527.JPG"
+        "id": "DSC_7243.jpg",
+        "name": "DSC_7243.jpg",
+        "category": "brasil",
+        "src": "images\\brasil\\DSC_7243.jpg",
+        "min": "images\\brasil\\DSC_7243.min.jpg"
     },
     {
-        "id": "IMG_3528.JPG",
-        "name": "IMG_3528.JPG",
-        "category": "karen",
-        "src": "images\\karen\\IMG_3528.JPG"
+        "id": "DSC_7492.jpg",
+        "name": "DSC_7492.jpg",
+        "category": "brasil",
+        "src": "images\\brasil\\DSC_7492.jpg",
+        "min": "images\\brasil\\DSC_7492.min.jpg"
     },
     {
-        "id": "IMG_3530.JPG",
-        "name": "IMG_3530.JPG",
+        "id": "IMG_3489.jpg",
+        "name": "IMG_3489.jpg",
         "category": "karen",
-        "src": "images\\karen\\IMG_3530.JPG"
+        "src": "images\\karen\\IMG_3489.jpg",
+        "min": "images\\karen\\IMG_3489.min.jpg"
     },
     {
-        "id": "IMG_3532.JPG",
-        "name": "IMG_3532.JPG",
+        "id": "IMG_3494.jpg",
+        "name": "IMG_3494.jpg",
         "category": "karen",
-        "src": "images\\karen\\IMG_3532.JPG"
+        "src": "images\\karen\\IMG_3494.jpg",
+        "min": "images\\karen\\IMG_3494.min.jpg"
+    },
+    {
+        "id": "IMG_3505.jpg",
+        "name": "IMG_3505.jpg",
+        "category": "karen",
+        "src": "images\\karen\\IMG_3505.jpg",
+        "min": "images\\karen\\IMG_3505.min.jpg"
+    },
+    {
+        "id": "IMG_3522.jpg",
+        "name": "IMG_3522.jpg",
+        "category": "karen",
+        "src": "images\\karen\\IMG_3522.jpg",
+        "min": "images\\karen\\IMG_3522.min.jpg"
+    },
+    {
+        "id": "IMG_3530.jpg",
+        "name": "IMG_3530.jpg",
+        "category": "karen",
+        "src": "images\\karen\\IMG_3530.jpg",
+        "min": "images\\karen\\IMG_3530.min.jpg"
+    },
+    {
+        "id": "IMG_3532.jpg",
+        "name": "IMG_3532.jpg",
+        "category": "karen",
+        "src": "images\\karen\\IMG_3532.jpg",
+        "min": "images\\karen\\IMG_3532.min.jpg"
     },
     {
         "id": "estereotipos.jpg",
         "name": "estereotipos.jpg",
         "category": "memes",
-        "src": "images\\memes\\estereotipos.jpg"
+        "src": "images\\memes\\estereotipos.jpg",
+        "min": "images\\memes\\estereotipos.min.jpg"
     },
     {
         "id": "estreno.jpg",
         "name": "estreno.jpg",
         "category": "memes",
-        "src": "images\\memes\\estreno.jpg"
+        "src": "images\\memes\\estreno.jpg",
+        "min": "images\\memes\\estreno.min.jpg"
     },
     {
         "id": "rambo.jpg",
         "name": "rambo.jpg",
         "category": "memes",
-        "src": "images\\memes\\rambo.jpg"
+        "src": "images\\memes\\rambo.jpg",
+        "min": "images\\memes\\rambo.min.jpg"
     },
     {
         "id": "should.jpeg",
         "name": "should.jpeg",
         "category": "memes",
-        "src": "images\\memes\\should.jpeg"
+        "src": "images\\memes\\should.jpeg",
+        "min": "images\\memes\\should.jpeg"
     },
     {
         "id": "simpsons.jpg",
         "name": "simpsons.jpg",
         "category": "memes",
-        "src": "images\\memes\\simpsons.jpg"
+        "src": "images\\memes\\simpsons.jpg",
+        "min": "images\\memes\\simpsons.min.jpg"
     },
     {
         "id": "tos.jpg",
         "name": "tos.jpg",
         "category": "memes",
-        "src": "images\\memes\\tos.jpg"
+        "src": "images\\memes\\tos.jpg",
+        "min": "images\\memes\\tos.min.jpg"
     },
     {
         "id": "transporte.jpg",
         "name": "transporte.jpg",
         "category": "memes",
-        "src": "images\\memes\\transporte.jpg"
+        "src": "images\\memes\\transporte.jpg",
+        "min": "images\\memes\\transporte.min.jpg"
     },
     {
         "id": "turn.jpg",
         "name": "turn.jpg",
         "category": "memes",
-        "src": "images\\memes\\turn.jpg"
+        "src": "images\\memes\\turn.jpg",
+        "min": "images\\memes\\turn.min.jpg"
     },
     {
         "id": "tuyo.jpg",
         "name": "tuyo.jpg",
         "category": "memes",
-        "src": "images\\memes\\tuyo.jpg"
+        "src": "images\\memes\\tuyo.jpg",
+        "min": "images\\memes\\tuyo.min.jpg"
     },
     {
         "id": "universidad.jpg",
         "name": "universidad.jpg",
         "category": "memes",
-        "src": "images\\memes\\universidad.jpg"
+        "src": "images\\memes\\universidad.jpg",
+        "min": "images\\memes\\universidad.min.jpg"
     },
     {
         "id": "uuuh.jpg",
         "name": "uuuh.jpg",
         "category": "memes",
-        "src": "images\\memes\\uuuh.jpg"
+        "src": "images\\memes\\uuuh.jpg",
+        "min": "images\\memes\\uuuh.min.jpg"
     }
 ]
