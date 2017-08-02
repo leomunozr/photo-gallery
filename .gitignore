@@ -1,10 +1,10 @@
-node_modules
+/node_modules
 angulargrid-master.zip
-images
+/images
 animations.zip
 filterizr.html
 angulargrid-master
-bower_components
-build
-js/images.json
+/bower_components
+/build
+/js/images.json
 ToDos
