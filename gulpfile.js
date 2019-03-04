@@ -11,6 +11,7 @@ var babelify = require('babelify'),
   buffer = require('vinyl-buffer'),
   uglify = require('gulp-uglify'),
   concat = require('gulp-concat'),
+  fonts = 'node_modules/bootstrap/fonts/*',
   vendors = [
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
     'node_modules/angular/angular.min.js',
@@ -62,6 +63,11 @@ gulp.task('build:css', function () {
   ])
     .pipe(concat('styles.css'))
     .pipe(gulp.dest('./build/css'));
+});
+
+gulp.task('build:fonts', function() {
+  gulp.src(fonts)
+    .pipe(gulp.dest('./build/fonts'));
 });
 
 gulp.task('listImages', function() {
