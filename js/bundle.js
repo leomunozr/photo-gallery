@@ -11,7 +11,7 @@ var _gallery2 = _interopRequireDefault(_gallery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var templateUrl = './gallery/gallery.html';
+var templateUrl = '/gallery/gallery.html';
 
 var galleryComponent = {
   restrict: 'E',
@@ -154,7 +154,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 angular.module('app', ['ngAnimate', 'ngRoute', 'angularGrid', _gallery4.default.name, _panel4.default.name]).value('THROTTLE_MILLISECONDS', 350).controller('MainCtrl', _main2.default).config(function ($routeProvider) {
   $routeProvider.when('/', {
-    templateUrl: '../gallery/gallery.html',
+    templateUrl: '/gallery/gallery.html',
     controller: _gallery2.default,
     controllerAs: 'vm'
   }).when('/:category', {
