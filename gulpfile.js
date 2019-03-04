@@ -10,6 +10,7 @@ var babelify = require('babelify'),
   source = require("vinyl-source-stream"),
   buffer = require('vinyl-buffer'),
   uglify = require('gulp-uglify'),
+  concat = require('gulp-concat'),
   vendors = [
     'node_modules/bootstrap/dist/js/bootstrap.min.js',
     'node_modules/angular/angular.min.js',
@@ -20,7 +21,7 @@ var babelify = require('babelify'),
 
 var jsSources = glob.sync('./!(build|node_modules|bower_components)/*.js');
 
-gulp.task('build', ['build:app', 'build:vendor']);
+gulp.task('build', ['build:app', 'build:vendor', 'build:html', 'build:css']);
 
 gulp.task('build:app', function() {
   console.log('Building...');
@@ -33,7 +34,7 @@ gulp.task('build:app', function() {
     }))
     .bundle()
     .pipe(source('bundle.js'))
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest('./build/js'));
 });
 
 gulp.task('build:vendor', () => {
@@ -42,7 +43,25 @@ gulp.task('build:vendor', () => {
     .pipe(source('vendor.js'))
     .pipe(buffer())
     .pipe(uglify())
-    .pipe(gulp.dest('./build/'));
+    .pipe(gulp.dest('./build/js'));
+});
+
+gulp.task('build:html', () => {
+  gulp.src([
+    '**/*.html',
+    '!node_modules/**',
+    '!build/**',
+  ])
+    .pipe(gulp.dest('./build'));
+});
+
+gulp.task('build:css', function () {
+  gulp.src([
+    'node_modules/bootstrap/dist/css/bootstrap.min.css',
+    './css/styles.css'
+  ])
+    .pipe(concat('styles.css'))
+    .pipe(gulp.dest('./build/css'));
 });
 
 gulp.task('listImages', function() {
@@ -101,7 +120,7 @@ gulp.task('minify', function() {
 });
 
 gulp.task('serve', function() {
-  connect.server();
+  connect.server({ root: 'build' });
 });
 
 gulp.task('default', ['listImages', 'minify', 'build', 'watch', 'serve']);
