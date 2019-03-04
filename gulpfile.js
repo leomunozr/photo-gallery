@@ -7,11 +7,22 @@ var babelify = require('babelify'),
   imageResize = require('gulp-image-resize');
   path = require('path'),
   rename = require("gulp-rename"),
-  source = require("vinyl-source-stream");
+  source = require("vinyl-source-stream"),
+  buffer = require('vinyl-buffer'),
+  uglify = require('gulp-uglify'),
+  vendors = [
+    'node_modules/bootstrap/dist/js/bootstrap.min.js',
+    'node_modules/angular/angular.min.js',
+    'node_modules/angular-animate/angular-animate.min.js',
+    'node_modules/angular-route/angular-route.js',
+    'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js',
+    'node_modules/angulargrid/angulargrid.js'];
 
 var jsSources = glob.sync('./!(build|node_modules|bower_components)/*.js');
 
-gulp.task('build', function() {
+gulp.task('build', ['build:app', 'build:vendor']);
+
+gulp.task('build:app', function() {
   console.log('Building...');
   console.log(jsSources) 
   return browserify({
@@ -23,6 +34,15 @@ gulp.task('build', function() {
     .bundle()
     .pipe(source('bundle.js'))
     .pipe(gulp.dest('./build'));
+});
+
+gulp.task('build:vendor', () => {
+  return browserify({ entries: vendors })
+    .bundle()
+    .pipe(source('vendor.js'))
+    .pipe(buffer())
+    .pipe(uglify())
+    .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('listImages', function() {
@@ -75,7 +95,7 @@ gulp.task('listImages', function() {
 
 gulp.task('minify', function() {
   gulp.src(['images/**/*.jpg', '!images/**/*.min.*'])
-    .pipe(imageResize({ width: 600 }))
+    // .pipe(imageResize({ width: 600 }))
     .pipe(rename(function(path) { path.basename += '.min'}))
     .pipe(gulp.dest('images'));
 });
