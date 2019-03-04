@@ -158,7 +158,7 @@ angular.module('app', ['ngAnimate', 'ngRoute', 'angularGrid', _gallery4.default.
     controller: _gallery2.default,
     controllerAs: 'vm'
   }).when('/:category', {
-    templateUrl: '../gallery/gallery.html',
+    templateUrl: 'gallery/gallery.html',
     controller: _gallery2.default,
     controllerAs: 'vm'
   }).when('/image/:img', {
