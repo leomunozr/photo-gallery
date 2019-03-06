@@ -154,11 +154,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 angular.module('app', ['ngAnimate', 'ngRoute', 'angularGrid', _gallery4.default.name, _panel4.default.name]).value('THROTTLE_MILLISECONDS', 350).controller('MainCtrl', _main2.default).config(function ($routeProvider) {
   $routeProvider.when('/', {
-    templateUrl: '../gallery/gallery.html',
+    templateUrl: 'gallery/gallery.html',
     controller: _gallery2.default,
     controllerAs: 'vm'
   }).when('/:category', {
-    templateUrl: '../gallery/gallery.html',
+    templateUrl: 'gallery/gallery.html',
     controller: _gallery2.default,
     controllerAs: 'vm'
   }).when('/image/:img', {
@@ -171,249 +171,81 @@ angular.module('app', ['ngAnimate', 'ngRoute', 'angularGrid', _gallery4.default.
 },{"../gallery/gallery":3,"../gallery/gallery.controller":2,"../panel/panel":112,"../panel/panel.controller":110,"./main.controller":6}],5:[function(require,module,exports){
 module.exports=[
     {
-        "id": "DSC_0309.jpg",
-        "name": "DSC_0309.jpg",
+        "id": "DSC_3681.jpg",
+        "name": "DSC_3681.jpg",
         "category": ".",
-        "src": "images\\DSC_0309.jpg",
-        "min": "images\\DSC_0309.min.jpg"
-    },
-    {
-        "id": "DSC_1431.jpg",
-        "name": "DSC_1431.jpg",
-        "category": ".",
-        "src": "images\\DSC_1431.jpg",
-        "min": "images\\DSC_1431.min.jpg"
-    },
-    {
-        "id": "DSC_1635-2.jpg",
-        "name": "DSC_1635-2.jpg",
-        "category": ".",
-        "src": "images\\DSC_1635-2.jpg",
-        "min": "images\\DSC_1635-2.min.jpg"
-    },
-    {
-        "id": "DSC_2705-2.jpg",
-        "name": "DSC_2705-2.jpg",
-        "category": ".",
-        "src": "images\\DSC_2705-2.jpg",
-        "min": "images\\DSC_2705-2.min.jpg"
+        "src": "images/DSC_3681.jpg",
+        "min": "images/DSC_3681.min.jpg"
     },
     {
         "id": "DSC_3777.jpg",
         "name": "DSC_3777.jpg",
         "category": ".",
-        "src": "images\\DSC_3777.jpg",
-        "min": "images\\DSC_3777.min.jpg"
+        "src": "images/DSC_3777.jpg",
+        "min": "images/DSC_3777.min.jpg"
+    },
+    {
+        "id": "DSC_3934.jpg",
+        "name": "DSC_3934.jpg",
+        "category": ".",
+        "src": "images/DSC_3934.jpg",
+        "min": "images/DSC_3934.min.jpg"
     },
     {
         "id": "DSC_3935.jpg",
         "name": "DSC_3935.jpg",
         "category": ".",
-        "src": "images\\DSC_3935.jpg",
-        "min": "images\\DSC_3935.min.jpg"
+        "src": "images/DSC_3935.jpg",
+        "min": "images/DSC_3935.min.jpg"
     },
     {
         "id": "DSC_4349.jpg",
         "name": "DSC_4349.jpg",
         "category": ".",
-        "src": "images\\DSC_4349.jpg",
-        "min": "images\\DSC_4349.min.jpg"
+        "src": "images/DSC_4349.jpg",
+        "min": "images/DSC_4349.min.jpg"
     },
     {
         "id": "DSC_4539.jpg",
         "name": "DSC_4539.jpg",
         "category": ".",
-        "src": "images\\DSC_4539.jpg",
-        "min": "images\\DSC_4539.min.jpg"
+        "src": "images/DSC_4539.jpg",
+        "min": "images/DSC_4539.min.jpg"
     },
     {
-        "id": "DSC_5060.jpg",
-        "name": "DSC_5060.jpg",
+        "id": "DSC_5774.jpg",
+        "name": "DSC_5774.jpg",
         "category": ".",
-        "src": "images\\DSC_5060.jpg",
-        "min": "images\\DSC_5060.min.jpg"
+        "src": "images/DSC_5774.jpg",
+        "min": "images/DSC_5774.min.jpg"
     },
     {
-        "id": "DSC_5309.jpg",
-        "name": "DSC_5309.jpg",
+        "id": "DSC_5951.jpg",
+        "name": "DSC_5951.jpg",
         "category": ".",
-        "src": "images\\DSC_5309.jpg",
-        "min": "images\\DSC_5309.min.jpg"
+        "src": "images/DSC_5951.jpg",
+        "min": "images/DSC_5951.min.jpg"
     },
     {
-        "id": "DSC_5939.jpg",
-        "name": "DSC_5939.jpg",
+        "id": "DSC_6035.jpg",
+        "name": "DSC_6035.jpg",
         "category": ".",
-        "src": "images\\DSC_5939.jpg",
-        "min": "images\\DSC_5939.min.jpg"
-    },
-    {
-        "id": "DSC_5967.jpg",
-        "name": "DSC_5967.jpg",
-        "category": ".",
-        "src": "images\\DSC_5967.jpg",
-        "min": "images\\DSC_5967.min.jpg"
-    },
-    {
-        "id": "DSC_5974.jpg",
-        "name": "DSC_5974.jpg",
-        "category": ".",
-        "src": "images\\DSC_5974.jpg",
-        "min": "images\\DSC_5974.min.jpg"
+        "src": "images/DSC_6035.jpg",
+        "min": "images/DSC_6035.min.jpg"
     },
     {
         "id": "DSC_6040.jpg",
         "name": "DSC_6040.jpg",
         "category": ".",
-        "src": "images\\DSC_6040.jpg",
-        "min": "images\\DSC_6040.min.jpg"
+        "src": "images/DSC_6040.jpg",
+        "min": "images/DSC_6040.min.jpg"
     },
     {
-        "id": "DSC_7190.jpg",
-        "name": "DSC_7190.jpg",
+        "id": "DSC_6075.jpg",
+        "name": "DSC_6075.jpg",
         "category": ".",
-        "src": "images\\DSC_7190.jpg",
-        "min": "images\\DSC_7190.min.jpg"
-    },
-    {
-        "id": "DSC_9720-Edit.jpg",
-        "name": "DSC_9720-Edit.jpg",
-        "category": ".",
-        "src": "images\\DSC_9720-Edit.jpg",
-        "min": "images\\DSC_9720-Edit.min.jpg"
-    },
-    {
-        "id": "DSC_9900.jpg",
-        "name": "DSC_9900.jpg",
-        "category": ".",
-        "src": "images\\DSC_9900.jpg",
-        "min": "images\\DSC_9900.min.jpg"
-    },
-    {
-        "id": "IMG_20161127_000434.jpg",
-        "name": "IMG_20161127_000434.jpg",
-        "category": ".",
-        "src": "images\\IMG_20161127_000434.jpg",
-        "min": "images\\IMG_20161127_000434.min.jpg"
-    },
-    {
-        "id": "IMG_20161129_005837.jpg",
-        "name": "IMG_20161129_005837.jpg",
-        "category": ".",
-        "src": "images\\IMG_20161129_005837.jpg",
-        "min": "images\\IMG_20161129_005837.min.jpg"
-    },
-    {
-        "id": "IMG_20161129_010955.jpg",
-        "name": "IMG_20161129_010955.jpg",
-        "category": ".",
-        "src": "images\\IMG_20161129_010955.jpg",
-        "min": "images\\IMG_20161129_010955.min.jpg"
-    },
-    {
-        "id": "IMG_20180712_194230.jpg",
-        "name": "IMG_20180712_194230.jpg",
-        "category": ".",
-        "src": "images\\IMG_20180712_194230.jpg",
-        "min": "images\\IMG_20180712_194230.min.jpg"
-    },
-    {
-        "id": "IMG_20180723_134458.jpg",
-        "name": "IMG_20180723_134458.jpg",
-        "category": ".",
-        "src": "images\\IMG_20180723_134458.jpg",
-        "min": "images\\IMG_20180723_134458.min.jpg"
-    },
-    {
-        "id": "IMG_20180723_134555.jpg",
-        "name": "IMG_20180723_134555.jpg",
-        "category": ".",
-        "src": "images\\IMG_20180723_134555.jpg",
-        "min": "images\\IMG_20180723_134555.min.jpg"
-    },
-    {
-        "id": "IMG_20180723_170137.jpg",
-        "name": "IMG_20180723_170137.jpg",
-        "category": ".",
-        "src": "images\\IMG_20180723_170137.jpg",
-        "min": "images\\IMG_20180723_170137.min.jpg"
-    },
-    {
-        "id": "IMG_20180726_154721.jpg",
-        "name": "IMG_20180726_154721.jpg",
-        "category": ".",
-        "src": "images\\IMG_20180726_154721.jpg",
-        "min": "images\\IMG_20180726_154721.min.jpg"
-    },
-    {
-        "id": "IMG_20180727_051114.jpg",
-        "name": "IMG_20180727_051114.jpg",
-        "category": ".",
-        "src": "images\\IMG_20180727_051114.jpg",
-        "min": "images\\IMG_20180727_051114.min.jpg"
-    },
-    {
-        "id": "IMG_20180921_191751.jpg",
-        "name": "IMG_20180921_191751.jpg",
-        "category": ".",
-        "src": "images\\IMG_20180921_191751.jpg",
-        "min": "images\\IMG_20180921_191751.min.jpg"
-    },
-    {
-        "id": "IMG_20181110_180422-EFFECTS.jpg",
-        "name": "IMG_20181110_180422-EFFECTS.jpg",
-        "category": ".",
-        "src": "images\\IMG_20181110_180422-EFFECTS.jpg",
-        "min": "images\\IMG_20181110_180422-EFFECTS.min.jpg"
-    },
-    {
-        "id": "IMG_20181120_151437.jpg",
-        "name": "IMG_20181120_151437.jpg",
-        "category": ".",
-        "src": "images\\IMG_20181120_151437.jpg",
-        "min": "images\\IMG_20181120_151437.min.jpg"
-    },
-    {
-        "id": "IMG_20181122_223634.jpg",
-        "name": "IMG_20181122_223634.jpg",
-        "category": ".",
-        "src": "images\\IMG_20181122_223634.jpg",
-        "min": "images\\IMG_20181122_223634.min.jpg"
-    },
-    {
-        "id": "IMG_20181221_173903.jpg",
-        "name": "IMG_20181221_173903.jpg",
-        "category": ".",
-        "src": "images\\IMG_20181221_173903.jpg",
-        "min": "images\\IMG_20181221_173903.min.jpg"
-    },
-    {
-        "id": "IMG_20181230_130257.jpg",
-        "name": "IMG_20181230_130257.jpg",
-        "category": ".",
-        "src": "images\\IMG_20181230_130257.jpg",
-        "min": "images\\IMG_20181230_130257.min.jpg"
-    },
-    {
-        "id": "IMG_20181231_125518.jpg",
-        "name": "IMG_20181231_125518.jpg",
-        "category": ".",
-        "src": "images\\IMG_20181231_125518.jpg",
-        "min": "images\\IMG_20181231_125518.min.jpg"
-    },
-    {
-        "id": "IMG_20190216_185919.jpg",
-        "name": "IMG_20190216_185919.jpg",
-        "category": ".",
-        "src": "images\\IMG_20190216_185919.jpg",
-        "min": "images\\IMG_20190216_185919.min.jpg"
-    },
-    {
-        "id": "IMG_20190218_182039.jpg",
-        "name": "IMG_20190218_182039.jpg",
-        "category": ".",
-        "src": "images\\IMG_20190218_182039.jpg",
-        "min": "images\\IMG_20190218_182039.min.jpg"
+        "src": "images/DSC_6075.jpg",
+        "min": "images/DSC_6075.min.jpg"
     }
 ]
 },{}],6:[function(require,module,exports){
