@@ -7,6 +7,7 @@ const fs = require('fs');
 const glob = require('glob');
 const gulp = require('gulp');
 const path = require('path');
+const sharp = require('sharp');
 const source = require("vinyl-source-stream");
 const uglify = require('gulp-uglify');
 
@@ -90,8 +91,6 @@ gulp.task('listImages', () => {
     const files = fs.readdirSync(dir);
     
     return files.map((file) => {
-      // No listar las imágenes minificadas
-      if (file.includes('.min')) return;
 
       const filePath = path.join(dir, file);
       const fileStats = fs.statSync(filePath);
@@ -105,8 +104,7 @@ gulp.task('listImages', () => {
         'id': file,
         'name': file,
         'category': path.dirname(path.relative(basePath, filePath)),
-        'src': path.relative('.', filePath),
-        'min': path.relative('.', filePath).replace('.jpg', '.min.jpg')
+        'src': path.relative('.', filePath)
       }
     })
     .reduce((arr, img) => arr.concat(img), []);
@@ -124,18 +122,47 @@ gulp.task('listImages', () => {
   console.info('List of images generated successfully.');
 });
 
-gulp.task('minify', function() {
-  gulp.src(['images/**/*.jpg', '!images/**/*.min.*'])
-    // .pipe(imageResize({ width: 600 }))
-    .pipe(rename(function(path) { path.basename += '.min'}))
-    .pipe(gulp.dest('images'));
+gulp.task('resizeImages', function() {
+  const imagesPath = path.resolve(__dirname, 'images');
+  console.info('Starting reading images from: ', imagesPath);
+
+  readImages(imagesPath);
+
+  function readImages(dir) {
+
+    fs.readdir(dir, (err, files) => {
+      
+      files.map(file => {
+        if (file === 'mobile') return;
+
+        const filePath = path.join(dir, file);
+        const fileStats = fs.statSync(filePath);
+
+        if (fileStats.isDirectory()) {
+          console.info(`Found dir ${filePath}. Reading new dir...`);
+          readImages(filePath);
+        }
+        else if (fileStats.isFile()) {
+          const mobilePath = path.join(dir, 'mobile');
+          fs.mkdir(mobilePath, (err) => { if (err) return });
+          
+          sharp(filePath)
+            .resize(500)
+            .toFile(path.join(mobilePath, file))
+            .catch(err => console.error);
+        }
+      });
+
+      console.info(`Finished reading dir ${dir}.`);
+    });
+  }
 });
 
 gulp.task('serve', () => {
   connect.server({ root: BUILD_DIR });
 });
 
-gulp.task('default', ['listImages', 'minify', 'build', 'watch', 'serve']);
+gulp.task('default', ['listImages', 'resizeImages', 'build', 'watch', 'serve']);
 
 gulp.task('watch', () => {
   gulp.watch(jsSources, ['build']);
