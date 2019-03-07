@@ -170,83 +170,139 @@ angular.module('app', ['ngAnimate', 'ngRoute', 'angularGrid', _gallery4.default.
 
 },{"../gallery/gallery":3,"../gallery/gallery.controller":2,"../panel/panel":112,"../panel/panel.controller":110,"./main.controller":6}],5:[function(require,module,exports){
 module.exports=[
-    {
-        "id": "DSC_3681.jpg",
-        "name": "DSC_3681.jpg",
-        "category": ".",
-        "src": "images/DSC_3681.jpg",
-        "min": "images/DSC_3681.min.jpg"
-    },
-    {
-        "id": "DSC_3777.jpg",
-        "name": "DSC_3777.jpg",
-        "category": ".",
-        "src": "images/DSC_3777.jpg",
-        "min": "images/DSC_3777.min.jpg"
-    },
-    {
-        "id": "DSC_3934.jpg",
-        "name": "DSC_3934.jpg",
-        "category": ".",
-        "src": "images/DSC_3934.jpg",
-        "min": "images/DSC_3934.min.jpg"
-    },
-    {
-        "id": "DSC_3935.jpg",
-        "name": "DSC_3935.jpg",
-        "category": ".",
-        "src": "images/DSC_3935.jpg",
-        "min": "images/DSC_3935.min.jpg"
-    },
-    {
-        "id": "DSC_4349.jpg",
-        "name": "DSC_4349.jpg",
-        "category": ".",
-        "src": "images/DSC_4349.jpg",
-        "min": "images/DSC_4349.min.jpg"
-    },
-    {
-        "id": "DSC_4539.jpg",
-        "name": "DSC_4539.jpg",
-        "category": ".",
-        "src": "images/DSC_4539.jpg",
-        "min": "images/DSC_4539.min.jpg"
-    },
-    {
-        "id": "DSC_5774.jpg",
-        "name": "DSC_5774.jpg",
-        "category": ".",
-        "src": "images/DSC_5774.jpg",
-        "min": "images/DSC_5774.min.jpg"
-    },
-    {
-        "id": "DSC_5951.jpg",
-        "name": "DSC_5951.jpg",
-        "category": ".",
-        "src": "images/DSC_5951.jpg",
-        "min": "images/DSC_5951.min.jpg"
-    },
-    {
-        "id": "DSC_6035.jpg",
-        "name": "DSC_6035.jpg",
-        "category": ".",
-        "src": "images/DSC_6035.jpg",
-        "min": "images/DSC_6035.min.jpg"
-    },
-    {
-        "id": "DSC_6040.jpg",
-        "name": "DSC_6040.jpg",
-        "category": ".",
-        "src": "images/DSC_6040.jpg",
-        "min": "images/DSC_6040.min.jpg"
-    },
-    {
-        "id": "DSC_6075.jpg",
-        "name": "DSC_6075.jpg",
-        "category": ".",
-        "src": "images/DSC_6075.jpg",
-        "min": "images/DSC_6075.min.jpg"
-    }
+  {
+    "id": "DSC_2705-2.jpg",
+    "name": "DSC_2705-2.jpg",
+    "category": "architecture",
+    "src": "images/architecture/DSC_2705-2.jpg",
+    "min": "images/architecture/min/DSC_2705-2.jpg"
+  },
+  {
+    "id": "DSC_3777.jpg",
+    "name": "DSC_3777.jpg",
+    "category": "architecture",
+    "src": "images/architecture/DSC_3777.jpg",
+    "min": "images/architecture/min/DSC_3777.jpg"
+  },
+  {
+    "id": "DSC_5939.jpg",
+    "name": "DSC_5939.jpg",
+    "category": "architecture",
+    "src": "images/architecture/DSC_5939.jpg",
+    "min": "images/architecture/min/DSC_5939.jpg"
+  },
+  {
+    "id": "DSC_5967.jpg",
+    "name": "DSC_5967.jpg",
+    "category": "architecture",
+    "src": "images/architecture/DSC_5967.jpg",
+    "min": "images/architecture/min/DSC_5967.jpg"
+  },
+  {
+    "id": "DSC_5974.jpg",
+    "name": "DSC_5974.jpg",
+    "category": "architecture",
+    "src": "images/architecture/DSC_5974.jpg",
+    "min": "images/architecture/min/DSC_5974.jpg"
+  },
+  {
+    "id": "IMG_20180723_134458.jpg",
+    "name": "IMG_20180723_134458.jpg",
+    "category": "nature",
+    "src": "images/nature/IMG_20180723_134458.jpg",
+    "min": "images/nature/min/IMG_20180723_134458.jpg"
+  },
+  {
+    "id": "IMG_20180723_134555.jpg",
+    "name": "IMG_20180723_134555.jpg",
+    "category": "nature",
+    "src": "images/nature/IMG_20180723_134555.jpg",
+    "min": "images/nature/min/IMG_20180723_134555.jpg"
+  },
+  {
+    "id": "IMG_20180723_170137.jpg",
+    "name": "IMG_20180723_170137.jpg",
+    "category": "city",
+    "src": "images/city/IMG_20180723_170137.jpg",
+    "min": "images/city/min/IMG_20180723_170137.jpg"
+  },
+  {
+    "id": "IMG_20180726_154721.jpg",
+    "name": "IMG_20180726_154721.jpg",
+    "category": "city",
+    "src": "images/city/IMG_20180726_154721.jpg",
+    "min": "images/city/min/IMG_20180726_154721.jpg"
+  },
+  {
+    "id": "IMG_20180727_051114.jpg",
+    "name": "IMG_20180727_051114.jpg",
+    "category": "architecture",
+    "src": "images/architecture/IMG_20180727_051114.jpg",
+    "min": "images/architecture/min/IMG_20180727_051114.jpg"
+  },
+  {
+    "id": "IMG_20180921_191751.jpg",
+    "name": "IMG_20180921_191751.jpg",
+    "category": "city",
+    "src": "images/city/IMG_20180921_191751.jpg",
+    "min": "images/city/min/IMG_20180921_191751.jpg"
+  },
+  {
+    "id": "IMG_20181110_180422-EFFECTS.jpg",
+    "name": "IMG_20181110_180422-EFFECTS.jpg",
+    "category": "city",
+    "src": "images/city/IMG_20181110_180422-EFFECTS.jpg",
+    "min": "images/city/min/IMG_20181110_180422-EFFECTS.jpg"
+  },
+  {
+    "id": "IMG_20181120_151437.jpg",
+    "name": "IMG_20181120_151437.jpg",
+    "category": "nature",
+    "src": "images/nature/IMG_20181120_151437.jpg",
+    "min": "images/nature/min/IMG_20181120_151437.jpg"
+  },
+  {
+    "id": "IMG_20181122_223634.jpg",
+    "name": "IMG_20181122_223634.jpg",
+    "category": "city",
+    "src": "images/city/IMG_20181122_223634.jpg",
+    "min": "images/city/min/IMG_20181122_223634.jpg"
+  },
+  {
+    "id": "IMG_20181221_173903.jpg",
+    "name": "IMG_20181221_173903.jpg",
+    "category": "city",
+    "src": "images/city/IMG_20181221_173903.jpg",
+    "min": "images/city/min/IMG_20181221_173903.jpg"
+  },
+  {
+    "id": "IMG_20181230_130257.jpg",
+    "name": "IMG_20181230_130257.jpg",
+    "category": "nature",
+    "src": "images/nature/IMG_20181230_130257.jpg",
+    "min": "images/nature/min/IMG_20181230_130257.jpg"
+  },
+  {
+    "id": "IMG_20181231_125518.jpg",
+    "name": "IMG_20181231_125518.jpg",
+    "category": "nature",
+    "src": "images/nature/IMG_20181231_125518.jpg",
+    "min": "images/nature/min/IMG_20181231_125518.jpg"
+  },
+  {
+    "id": "IMG_20190216_185919.jpg",
+    "name": "IMG_20190216_185919.jpg",
+    "category": "architecture",
+    "src": "images/architecture/IMG_20190216_185919.jpg",
+    "min": "images/architecture/min/IMG_20190216_185919.jpg"
+  },
+  {
+    "id": "IMG_20190218_182039.jpg",
+    "name": "IMG_20190218_182039.jpg",
+    "category": "city",
+    "src": "images/city/IMG_20190218_182039.jpg",
+    "min": "images/city/min/IMG_20190218_182039.jpg"
+  }
 ]
 },{}],6:[function(require,module,exports){
 'use strict';
