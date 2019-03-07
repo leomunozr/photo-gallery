@@ -26,7 +26,7 @@ const BUILD_DIR_JS = path.resolve(BUILD_DIR, 'js');
 const BUILD_DIR_CSS = path.resolve(BUILD_DIR, 'css');
 const BUILD_DIR_FONTS = path.resolve(BUILD_DIR, 'fonts');
 
-gulp.task('build', ['build:app', 'build:vendor', 'build:html', 'build:css']);
+gulp.task('build', ['build:app', 'build:vendor', 'build:html', 'build:css', 'build:fonts']);
 
 gulp.task('build:app', () => {
   console.info('Building from: ', jsSources);
