@@ -163,7 +163,7 @@ gulp.task('serve', () => {
   connect.server({ root: BUILD_DIR });
 });
 
-gulp.task('default', ['listImages', 'resizeImages', 'build', 'watch', 'serve']);
+gulp.task('default', ['listImages', 'resizeImages', 'build', 'serve']);
 
 gulp.task('watch', () => {
   gulp.watch(jsSources, ['build']);
