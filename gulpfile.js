@@ -86,11 +86,17 @@ gulp.task('listImages', () => {
   console.info('Generating list of images...');
 
   const basePath = path.resolve(__dirname, 'images');
+  const imagesList = listFiles(basePath);
+
+  fs.writeFileSync('js/images.json', JSON.stringify(imagesList, null, 2));
+  
+  console.info('List of images generated successfully.');
 
   function listFiles(dir) {
     const files = fs.readdirSync(dir);
     
     return files.map((file) => {
+      if (file === 'mobile') return;
 
       const filePath = path.join(dir, file);
       const fileStats = fs.statSync(filePath);
@@ -107,19 +113,14 @@ gulp.task('listImages', () => {
         'src': path.relative('.', filePath)
       }
     })
-    .reduce((arr, img) => arr.concat(img), []);
+      .reduce((arr, img) => arr.concat(img), [])
+      .filter((img) => img)
+      .sort((a, b) => {
+        if (a.id > b.id) return 1;
+        if (a.id < b.id) return -1;
+        return 0;
+      });
   };
-
-  const imagesList = listFiles(basePath);
-
-  imagesList.sort((a, b) => {
-    if (a.id > b.id) return 1;
-    if (a.id < b.id) return -1;
-    return 0;
-  });
-
-  fs.writeFileSync('js/images.json', JSON.stringify(imagesList, null, 2));
-  console.info('List of images generated successfully.');
 });
 
 gulp.task('resizeImages', function() {
