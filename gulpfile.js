@@ -96,9 +96,10 @@ gulp.task('listImages', () => {
     const files = fs.readdirSync(dir);
     
     return files.map((file) => {
-      if (file === 'mobile') return;
+      if (file === 'min') return;
 
       const filePath = path.join(dir, file);
+      const minPath = path.join(dir, 'min', file);
       const fileStats = fs.statSync(filePath);
       
       if (fileStats.isDirectory()) {
@@ -110,7 +111,8 @@ gulp.task('listImages', () => {
         'id': file,
         'name': file,
         'category': path.dirname(path.relative(basePath, filePath)),
-        'src': path.relative('.', filePath)
+        'src': path.relative('.', filePath),
+        'min': path.relative('.', minPath)
       }
     })
       .reduce((arr, img) => arr.concat(img), [])
@@ -134,7 +136,7 @@ gulp.task('resizeImages', function() {
     fs.readdir(dir, (err, files) => {
       
       files.map(file => {
-        if (file === 'mobile') return;
+        if (file === 'min') return;
 
         const filePath = path.join(dir, file);
         const fileStats = fs.statSync(filePath);
@@ -144,12 +146,12 @@ gulp.task('resizeImages', function() {
           readImages(filePath);
         }
         else if (fileStats.isFile()) {
-          const mobilePath = path.join(dir, 'mobile');
-          fs.mkdir(mobilePath, (err) => { if (err) return });
+          const minPath = path.join(dir, 'min');
+          fs.mkdir(minPath, (err) => { if (err) return });
           
           sharp(filePath)
             .resize(500)
-            .toFile(path.join(mobilePath, file))
+            .toFile(path.join(minPath, file))
             .catch(err => console.error);
         }
       });
