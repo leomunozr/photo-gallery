@@ -29,7 +29,7 @@
 				</div>
 				<div class="collapse navbar-collapse" id="navCategories">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="menu-item"><a ng-href="/">All</a></li>
+						<li class="menu-item"><a ng-href="/photo-gallery">All</a></li>
 						<li class="menu-item" ng-class="{'menu-item--selected': category == main.categorySelected}" ng-repeat="category in main.categories">
 							<a ng-href="#!/{{::category.toLowerCase()}}">{{ ::category }}</a></li>
 					</ul>
