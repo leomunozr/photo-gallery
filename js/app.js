@@ -17,12 +17,12 @@ angular.module('app', [
   .config(($routeProvider) => { 
     $routeProvider
       .when('/', {
-        templateUrl: '../gallery/gallery.html',
+        templateUrl: 'gallery/gallery.html',
         controller: GalleryController,
         controllerAs: 'vm'
       })
       .when('/:category', {
-        templateUrl: '../gallery/gallery.html',
+        templateUrl: 'gallery/gallery.html',
         controller: GalleryController,
         controllerAs: 'vm'
       })
