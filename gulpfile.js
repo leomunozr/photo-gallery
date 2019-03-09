@@ -169,4 +169,6 @@ gulp.task('default', ['listImages', 'resizeImages', 'build', 'watch', 'serve']);
 
 gulp.task('watch', () => {
   gulp.watch(jsSources, ['build:app']);
+  gulp.watch('*.html', ['build:html']);
+  gulp.watch('css/styles.css', ['build:css']);
 });
