@@ -12,6 +12,7 @@ class GalleryController {
 
     $rootScope.currentCategory = this.categorySelected;
     $rootScope.images = this.images;
+    $rootScope.$broadcast('newCategory', { category: this.categorySelected });
   }
 
   loadImages(filter) {

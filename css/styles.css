@@ -1,35 +1,9 @@
-html, body {
-  height: 98%;
+* {
+  /* border: solid 1px red !important; */
+  box-sizing: border-box;
 }
 body { 
   overflow-y: scroll;
-  padding-top: 90px;
-}
-header {
-  color: #666;
-}
-.navbar-default {
-  background: white;
-  border: none; 
-}
-.navbar-toggle {
-  margin-top: 30px;
-}
-#navCategories ul {
-  margin-right: 50px;
-}
-.menu-item {
-  margin: 40px 10px 0;
-}
-.menu-item a{
-  color: #666 !important;
-  font-size: 16px;
-}
-.menu-item a:hover {
-  color: #888 !important;
-}
-.menu-item--selected a {
-  color: #bbb !important;
 }
 .dynamic-grid {
   position: relative;
@@ -80,6 +54,7 @@ header {
   opacity: 0;
   visibility: hidden;
   cursor: pointer;
+  transition: filter 0.2s ease-out;
 }
 .grid-img:hover {
   -webkit-filter: opacity(85%);
@@ -90,7 +65,7 @@ header {
   opacity: 1;
 }
 .img-container {
-  padding-top: 10px;
+  padding: 0 10px;
 }
 /*** Panel component ***/
 .close-icon {

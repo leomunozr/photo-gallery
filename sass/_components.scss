@@ -1,0 +1,77 @@
+.navbar {
+  margin: 20px;
+
+  .navbar-brand {
+    font-family: 'Rock Salt', cursive;
+    font-size: 36px;
+  }
+
+  .navbar-end .navbar-item {
+    font-family: Roboto, sans;
+    font-size: 18px;
+    margin-right: 10px;
+    border-bottom: solid 1px transparent;
+    color: #666;
+    text-decoration: none;
+    transition: padding 150ms ease-out;
+
+    &:hover {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #888;
+    }
+  
+    &--selected a {
+      color: #bbb;
+    }
+
+    &--selected {
+      border-bottom: 1px solid #888;
+    }
+  }
+}
+
+.container-image-panel {
+  display: flex;
+  justify-content: center;
+
+  .image-panel {
+    position: relative;
+
+    .close-icon {
+      background-color: transparent;
+      color: rgba(0,0,0,0.2);
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: color 200ms ease-out;
+
+      &:hover {
+        color: #32304ad4;
+      }
+    }
+    
+    .image-fullscreen {
+      height: calc(100vh - 116px);
+      width: auto;
+      
+      img {
+        height: 100%;
+        width: 100%;
+      }  
+    }
+  }
+}
+
+@media(max-width: '768px') {
+  .navbar {
+    margin: 10px 0;
+
+    .navbar-brand {
+      font-size: 24px;
+    }
+  }
+
+  .container-image-panel .image-panel .image-fullscreen {
+    height: calc(100vh - 78px);
+  }
+}

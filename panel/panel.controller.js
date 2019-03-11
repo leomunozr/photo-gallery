@@ -11,7 +11,8 @@ class PanelController {
     this.category = $rootScope.currentCategory || 'all';
     let imageId = $routeParams.img;
     this.slides = $rootScope.images || imagesOrig;
-    this.selected = this.slides.findIndex(slide => slide.id === imageId);
+    this.selectedIndex = this.slides.findIndex(slide => slide.id === imageId);
+    this.selectedImage = this.slides[this.selectedIndex];
 
     if (this.selected < 0) this.location.path('/');
     

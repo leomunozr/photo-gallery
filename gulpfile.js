@@ -11,9 +11,7 @@ const sharp = require('sharp');
 const source = require("vinyl-source-stream");
 const uglify = require('gulp-uglify');
 
-const fonts = 'node_modules/bootstrap/fonts/*';
 const vendors = [
-  'node_modules/bootstrap/dist/js/bootstrap.min.js',
   'node_modules/angular/angular.min.js',
   'node_modules/angular-animate/angular-animate.min.js',
   'node_modules/angular-route/angular-route.js',
@@ -26,7 +24,7 @@ const BUILD_DIR_JS = path.resolve(BUILD_DIR, 'js');
 const BUILD_DIR_CSS = path.resolve(BUILD_DIR, 'css');
 const BUILD_DIR_FONTS = path.resolve(BUILD_DIR, 'fonts');
 
-gulp.task('build', ['build:app', 'build:vendor', 'build:html', 'build:css', 'build:fonts']);
+gulp.task('build', ['build:app', 'build:vendor', 'build:html', 'build:css']);
 
 gulp.task('build:app', () => {
   console.info('Building from: ', jsSources);
@@ -68,18 +66,11 @@ gulp.task('build:css', () => {
   console.info('Copying CSS files to build dir...');
 
   gulp.src([
-    'node_modules/bootstrap/dist/css/bootstrap.min.css',
+    'node_modules/bulma/css/bulma.min.css',
     './css/styles.css'
   ])
     .pipe(concat('styles.css'))
     .pipe(gulp.dest(BUILD_DIR_CSS));
-});
-
-gulp.task('build:fonts', () => {
-  console.info('Copying font files to build dir...');
-
-  gulp.src(fonts)
-    .pipe(gulp.dest(BUILD_DIR_FONTS));
 });
 
 gulp.task('listImages', () => {
@@ -169,6 +160,6 @@ gulp.task('default', ['listImages', 'resizeImages', 'build', 'watch', 'serve']);
 
 gulp.task('watch', () => {
   gulp.watch(jsSources, ['build:app']);
-  gulp.watch('*.html', ['build:html']);
+  gulp.watch(['**/*.html', '!node_modules/**', '!build/**'], ['build:html']);
   gulp.watch('css/styles.css', ['build:css']);
 });
