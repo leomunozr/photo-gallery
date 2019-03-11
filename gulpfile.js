@@ -24,8 +24,6 @@ const BUILD_DIR_JS = path.resolve(BUILD_DIR, 'js');
 const BUILD_DIR_CSS = path.resolve(BUILD_DIR, 'css');
 const BUILD_DIR_FONTS = path.resolve(BUILD_DIR, 'fonts');
 
-gulp.task('build', ['build:app', 'build:vendor', 'build:html', 'build:css']);
-
 gulp.task('build:app', () => {
   console.info('Building from: ', jsSources);
 
@@ -116,7 +114,7 @@ gulp.task('listImages', () => {
   };
 });
 
-gulp.task('resizeImages', function() {
+gulp.task('resizeImages', () => {
   const imagesPath = path.resolve(__dirname, 'images');
   console.info('Starting reading images from: ', imagesPath);
 
@@ -151,6 +149,10 @@ gulp.task('resizeImages', function() {
     });
   }
 });
+
+gulp.task('build', ['build:app', 'build:vendor', 'build:html', 'build:css']);
+
+gulp.task('deploy', ['listImages', 'resizeImages', 'build']);
 
 gulp.task('serve', () => {
   connect.server({ root: BUILD_DIR });
