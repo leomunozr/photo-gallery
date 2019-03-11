@@ -172,6 +172,83 @@ angular.module('app', ['ngAnimate', 'ngRoute', 'angularGrid', _gallery4.default.
 },{"../gallery/gallery":3,"../gallery/gallery.controller":2,"../panel/panel":112,"../panel/panel.controller":110,"./main.controller":6}],5:[function(require,module,exports){
 module.exports=[
   {
+    "id": "DSC03830.jpg",
+    "name": "DSC03830.jpg",
+    "category": "nature",
+    "src": "images/nature/DSC03830.jpg",
+    "min": "images/nature/min/DSC03830.jpg"
+  },
+  {
+    "id": "DSC_0278.jpg",
+    "name": "DSC_0278.jpg",
+    "category": "city",
+    "src": "images/city/DSC_0278.jpg",
+    "min": "images/city/min/DSC_0278.jpg"
+  },
+  {
+    "id": "DSC_0295.jpg",
+    "name": "DSC_0295.jpg",
+    "category": "architecture",
+    "src": "images/architecture/DSC_0295.jpg",
+    "min": "images/architecture/min/DSC_0295.jpg"
+  },
+  {
+    "id": "DSC_0309.jpg",
+    "name": "DSC_0309.jpg",
+    "category": "city",
+    "src": "images/city/DSC_0309.jpg",
+    "min": "images/city/min/DSC_0309.jpg"
+  },
+  {
+    "id": "DSC_0534-2.jpg",
+    "name": "DSC_0534-2.jpg",
+    "category": "city",
+    "src": "images/city/DSC_0534-2.jpg",
+    "min": "images/city/min/DSC_0534-2.jpg"
+  },
+  {
+    "id": "DSC_0648.jpg",
+    "name": "DSC_0648.jpg",
+    "category": "nature",
+    "src": "images/nature/DSC_0648.jpg",
+    "min": "images/nature/min/DSC_0648.jpg"
+  },
+  {
+    "id": "DSC_1016-2.jpg",
+    "name": "DSC_1016-2.jpg",
+    "category": "city",
+    "src": "images/city/DSC_1016-2.jpg",
+    "min": "images/city/min/DSC_1016-2.jpg"
+  },
+  {
+    "id": "DSC_1038-2.jpg",
+    "name": "DSC_1038-2.jpg",
+    "category": "nature",
+    "src": "images/nature/DSC_1038-2.jpg",
+    "min": "images/nature/min/DSC_1038-2.jpg"
+  },
+  {
+    "id": "DSC_1395.jpg",
+    "name": "DSC_1395.jpg",
+    "category": "city",
+    "src": "images/city/DSC_1395.jpg",
+    "min": "images/city/min/DSC_1395.jpg"
+  },
+  {
+    "id": "DSC_1431.jpg",
+    "name": "DSC_1431.jpg",
+    "category": "nature",
+    "src": "images/nature/DSC_1431.jpg",
+    "min": "images/nature/min/DSC_1431.jpg"
+  },
+  {
+    "id": "DSC_1635-2.jpg",
+    "name": "DSC_1635-2.jpg",
+    "category": "architecture",
+    "src": "images/architecture/DSC_1635-2.jpg",
+    "min": "images/architecture/min/DSC_1635-2.jpg"
+  },
+  {
     "id": "DSC_2705-2.jpg",
     "name": "DSC_2705-2.jpg",
     "category": "architecture",
@@ -184,6 +261,62 @@ module.exports=[
     "category": "architecture",
     "src": "images/architecture/DSC_3777.jpg",
     "min": "images/architecture/min/DSC_3777.jpg"
+  },
+  {
+    "id": "DSC_4163.jpg",
+    "name": "DSC_4163.jpg",
+    "category": "city",
+    "src": "images/city/DSC_4163.jpg",
+    "min": "images/city/min/DSC_4163.jpg"
+  },
+  {
+    "id": "DSC_4371.jpg",
+    "name": "DSC_4371.jpg",
+    "category": "city",
+    "src": "images/city/DSC_4371.jpg",
+    "min": "images/city/min/DSC_4371.jpg"
+  },
+  {
+    "id": "DSC_4785.jpg",
+    "name": "DSC_4785.jpg",
+    "category": "city",
+    "src": "images/city/DSC_4785.jpg",
+    "min": "images/city/min/DSC_4785.jpg"
+  },
+  {
+    "id": "DSC_5060.jpg",
+    "name": "DSC_5060.jpg",
+    "category": "nature",
+    "src": "images/nature/DSC_5060.jpg",
+    "min": "images/nature/min/DSC_5060.jpg"
+  },
+  {
+    "id": "DSC_5312.jpg",
+    "name": "DSC_5312.jpg",
+    "category": "nature",
+    "src": "images/nature/DSC_5312.jpg",
+    "min": "images/nature/min/DSC_5312.jpg"
+  },
+  {
+    "id": "DSC_5320.jpg",
+    "name": "DSC_5320.jpg",
+    "category": "nature",
+    "src": "images/nature/DSC_5320.jpg",
+    "min": "images/nature/min/DSC_5320.jpg"
+  },
+  {
+    "id": "DSC_5321.jpg",
+    "name": "DSC_5321.jpg",
+    "category": "nature",
+    "src": "images/nature/DSC_5321.jpg",
+    "min": "images/nature/min/DSC_5321.jpg"
+  },
+  {
+    "id": "DSC_5724.JPG",
+    "name": "DSC_5724.JPG",
+    "category": "city",
+    "src": "images/city/DSC_5724.JPG",
+    "min": "images/city/min/DSC_5724.JPG"
   },
   {
     "id": "DSC_5939.jpg",
@@ -205,6 +338,111 @@ module.exports=[
     "category": "architecture",
     "src": "images/architecture/DSC_5974.jpg",
     "min": "images/architecture/min/DSC_5974.jpg"
+  },
+  {
+    "id": "DSC_7143.jpg",
+    "name": "DSC_7143.jpg",
+    "category": "city",
+    "src": "images/city/DSC_7143.jpg",
+    "min": "images/city/min/DSC_7143.jpg"
+  },
+  {
+    "id": "DSC_7190.jpg",
+    "name": "DSC_7190.jpg",
+    "category": "city",
+    "src": "images/city/DSC_7190.jpg",
+    "min": "images/city/min/DSC_7190.jpg"
+  },
+  {
+    "id": "DSC_7193.jpg",
+    "name": "DSC_7193.jpg",
+    "category": "city",
+    "src": "images/city/DSC_7193.jpg",
+    "min": "images/city/min/DSC_7193.jpg"
+  },
+  {
+    "id": "DSC_8087.jpg",
+    "name": "DSC_8087.jpg",
+    "category": "architecture",
+    "src": "images/architecture/DSC_8087.jpg",
+    "min": "images/architecture/min/DSC_8087.jpg"
+  },
+  {
+    "id": "DSC_8226.jpg",
+    "name": "DSC_8226.jpg",
+    "category": "architecture",
+    "src": "images/architecture/DSC_8226.jpg",
+    "min": "images/architecture/min/DSC_8226.jpg"
+  },
+  {
+    "id": "DSC_8585.jpg",
+    "name": "DSC_8585.jpg",
+    "category": "city",
+    "src": "images/city/DSC_8585.jpg",
+    "min": "images/city/min/DSC_8585.jpg"
+  },
+  {
+    "id": "DSC_9427.jpg",
+    "name": "DSC_9427.jpg",
+    "category": "architecture",
+    "src": "images/architecture/DSC_9427.jpg",
+    "min": "images/architecture/min/DSC_9427.jpg"
+  },
+  {
+    "id": "DSC_9469.jpg",
+    "name": "DSC_9469.jpg",
+    "category": "architecture",
+    "src": "images/architecture/DSC_9469.jpg",
+    "min": "images/architecture/min/DSC_9469.jpg"
+  },
+  {
+    "id": "DSC_9803.jpg",
+    "name": "DSC_9803.jpg",
+    "category": "misc",
+    "src": "images/misc/DSC_9803.jpg",
+    "min": "images/misc/min/DSC_9803.jpg"
+  },
+  {
+    "id": "DSC_9900.jpg",
+    "name": "DSC_9900.jpg",
+    "category": "nature",
+    "src": "images/nature/DSC_9900.jpg",
+    "min": "images/nature/min/DSC_9900.jpg"
+  },
+  {
+    "id": "DSC_9967.jpg",
+    "name": "DSC_9967.jpg",
+    "category": "nature",
+    "src": "images/nature/DSC_9967.jpg",
+    "min": "images/nature/min/DSC_9967.jpg"
+  },
+  {
+    "id": "HPIM1746.jpg",
+    "name": "HPIM1746.jpg",
+    "category": "architecture",
+    "src": "images/architecture/HPIM1746.jpg",
+    "min": "images/architecture/min/HPIM1746.jpg"
+  },
+  {
+    "id": "HPIM1932.JPG",
+    "name": "HPIM1932.JPG",
+    "category": "architecture",
+    "src": "images/architecture/HPIM1932.JPG",
+    "min": "images/architecture/min/HPIM1932.JPG"
+  },
+  {
+    "id": "HPIM2188.jpg",
+    "name": "HPIM2188.jpg",
+    "category": "city",
+    "src": "images/city/HPIM2188.jpg",
+    "min": "images/city/min/HPIM2188.jpg"
+  },
+  {
+    "id": "IMG_20170818_110602_1.jpg",
+    "name": "IMG_20170818_110602_1.jpg",
+    "category": "city",
+    "src": "images/city/IMG_20170818_110602_1.jpg",
+    "min": "images/city/min/IMG_20170818_110602_1.jpg"
   },
   {
     "id": "IMG_20180723_134458.jpg",
