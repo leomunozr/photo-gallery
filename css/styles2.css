@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css?family=Rock+Salt");
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+.navbar {
+  margin: 20px; }
+  .navbar .navbar-brand {
+    font-family: 'Rock Salt', cursive;
+    font-size: 36px; }
+  .navbar .navbar-end .navbar-item {
+    font-family: Roboto, sans;
+    font-size: 18px;
+    margin-right: 10px;
+    border-bottom: solid 1px transparent;
+    color: #666;
+    text-decoration: none;
+    transition: padding 150ms ease-out; }
+    .navbar .navbar-end .navbar-item:hover {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #888; }
+    .navbar .navbar-end .navbar-item--selected a {
+      color: #bbb; }
+    .navbar .navbar-end .navbar-item--selected {
+      border-bottom: 1px solid #888; }
+
+.container-image-panel {
+  display: flex;
+  justify-content: center; }
+  .container-image-panel .image-panel {
+    position: relative; }
+    .container-image-panel .image-panel .close-icon {
+      background-color: transparent;
+      color: rgba(0, 0, 0, 0.2);
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: color 200ms ease-out; }
+      .container-image-panel .image-panel .close-icon:hover {
+        color: #32304ad4; }
+    .container-image-panel .image-panel .image-fullscreen {
+      height: calc(100vh - 116px);
+      width: auto; }
+      .container-image-panel .image-panel .image-fullscreen img {
+        height: 100%;
+        width: 100%; }
+
+@media (max-width: 768px) {
+  .navbar {
+    margin: 10px 0; }
+    .navbar .navbar-brand {
+      font-size: 24px; }
+  .container-image-panel .image-panel .image-fullscreen {
+    height: calc(100vh - 78px); } }

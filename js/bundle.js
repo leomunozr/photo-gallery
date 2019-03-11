@@ -60,6 +60,7 @@ var GalleryController = function () {
 
     $rootScope.currentCategory = this.categorySelected;
     $rootScope.images = this.images;
+    $rootScope.$broadcast('newCategory', { category: this.categorySelected });
   }
 
   _createClass(GalleryController, [{
@@ -162,7 +163,7 @@ angular.module('app', ['ngAnimate', 'ngRoute', 'angularGrid', _gallery4.default.
     controller: _gallery2.default,
     controllerAs: 'vm'
   }).when('/image/:img', {
-    template: '<img-panel></img-panel>',
+    templateUrl: 'panel/panel.html',
     controller: _panel2.default,
     controllerAs: 'vm'
   });
@@ -327,16 +328,25 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var MainController = function MainController($scope) {
+var MainController = function MainController($scope, $rootScope) {
+  var _this = this;
+
   _classCallCheck(this, MainController);
 
   this.$scope = $scope;
   this.categories = (0, _uniq2.default)(_images2.default.map(function (img) {
     return (0, _startCase2.default)(img.category);
   }));
+  this.$rootScope = $rootScope;
+
+  this.$scope.$on('newCategory', function (ev, _ref) {
+    var category = _ref.category;
+
+    _this.categorySelected = category;
+  });
 };
 
-MainController.$inject = ['$scope'];
+MainController.$inject = ['$scope', '$rootScope'];
 exports.default = MainController;
 
 },{"./images.json":5,"lodash/startCase":105,"lodash/uniq":107}],7:[function(require,module,exports){
@@ -39522,9 +39532,10 @@ var PanelController = function () {
     this.category = $rootScope.currentCategory || 'all';
     var imageId = $routeParams.img;
     this.slides = $rootScope.images || _images2.default;
-    this.selected = this.slides.findIndex(function (slide) {
+    this.selectedIndex = this.slides.findIndex(function (slide) {
       return slide.id === imageId;
     });
+    this.selectedImage = this.slides[this.selectedIndex];
 
     if (this.selected < 0) this.location.path('/');
 

@@ -1,22 +1,11 @@
-<div class="container-flow panel">
-	<div class="row">
-		<div class="col-xs-12">
-			<div class="close-icon">
-        <a ng-href="#!/{{vm.category === 'all' ? '' : vm.category }}">
-          <span class="glyphicon glyphicon-remove-circle"></span>
-        </a>
-			</div>
-			<div uib-carousel active="vm.selected">
-				<div uib-slide ng-repeat="slide in vm.slides track by $index" index="$index">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-10 col-lg-offset-1">
-								<img ng-src="{{ ::slide.src }}" alt="image" class="img-responsive center-block">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+<div class="container container-image-panel">
+	<div class="image-panel">
+		<a ng-href="#!/{{vm.category === 'all' ? '' : vm.category }}">
+			<span class="icon is-large close-icon">
+				<i class="fas fa-lg fa-times"></i>
+			</span>
+		</a>
+		
+		<img class="image-fullscreen" ng-src="{{ ::vm.selectedImage.src }}" alt="image">
 	</div>
 </div>
